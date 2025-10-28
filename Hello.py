@@ -117,25 +117,34 @@ st.markdown(
 # ============================
 # 🧭 NAVBAR
 # ============================
+import base64
+from pathlib import Path
 
+logo_path = Path("Tlogo.png")
+if logo_path.exists():
+    with open(logo_path, "rb") as f:
+        logo_data = base64.b64encode(f.read()).decode()
 
-st.markdown(
-    """
-    <div class="navbar">
-    <div class="logo">
-        <img src="https://github.com/Maryama632/TASI_vision/blob/master/Tlogo.png" alt="logo">
-        <h1>PrediX</h1>
-    </div>
-<div class="links">
-        <a href="/?page=home">Home</a>
-        <a href="/?page=tasi_vision" style="color:#FFD700;">TASI Vision</a>
-        <a href="/?page=insight">Company Insight</a>
-        <a href="/?page=contact">Contact Us</a>
-    </div>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+    st.markdown(
+        f"""
+        <div class="navbar">
+            <div class="logo">
+                <img src="data:image/png;base64,{logo_data}" alt="logo" height="40">
+                <h1>PrediX</h1>
+            </div>
+            <div class="links">
+                <a href="/?page=home">Home</a>
+                <a href="/?page=tasi_vision" style="color:#FFD700;">TASI Vision</a>
+                <a href="/?page=insight">Company Insight</a>
+                <a href="/?page=contact">Contact Us</a>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+else:
+    st.warning("⚠️ Logo file not found at path: Tlogo.png")
+
 
 # ============================
 # 🧭 HERO SECTION
