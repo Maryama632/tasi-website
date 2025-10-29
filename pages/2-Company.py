@@ -232,7 +232,7 @@ if selected:
                 <div class="prediction-box">
                     <h3>Predicted Market Trend: <span style="color:#16A34A;">Upward 📈</span></h3>
                     <p style="color:#334155;">
-                        Based on the latest AI forecasting model, the TASI index is expected to move upward for the next 60 days.
+                        Based on the latest AI forecasting model, the Company index is expected to move upward for the next 60 days.
                     </p>
                 </div>
             </div>
@@ -244,7 +244,7 @@ if selected:
                     <div class="prediction-box">
                         <h3>Predicted Market Trend: <span style="color:#DC2626;">Downward 📉</span></h3>
                         <p style="color:#334155;">
-                            Based on the latest AI forecasting model, the TASI index is expected to move downward for the next 60 days.
+                            Based on the latest AI forecasting model, the company index is expected to move downward for the next 60 days.
                         </p>
                     </div>
                 </div>
