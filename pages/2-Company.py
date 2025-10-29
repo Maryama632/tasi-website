@@ -186,16 +186,16 @@ if selected:
     desc = info["desc"]
     clean_ticker = ticker.replace(".SR", "")
 
-    col1, col2 = st.columns([2, 3])
-    with col1:
-        st.markdown(f"**Company:** {selected} ({clean_ticker})")
-        st.markdown(f"**Sector:** {sector}")
-        st.markdown(f"**Description:** {desc}")
+    # 🔹 المعلومات أولاً (فوق)
+    st.markdown(f"**Company:** {selected} ({clean_ticker})")
+    st.markdown(f"**Sector:** {sector}")
+    st.markdown(f"**Description:** {desc}")
 
-    with col2:
-        st.image(info["image_model_name"])
-        st.image(info["image_60_name"])
+    # 🔹 بعدين الصور (تحت)
+    st.image(info["image_model_name"])
+    st.image(info["image_60_name"])
 
+    # 🔹 تنسيق الزر
     st.markdown(
         """
         <style>
@@ -221,6 +221,7 @@ if selected:
         """,
         unsafe_allow_html=True
     )
+
 
     # Wrapper to center it
     st.markdown('<div class="centered-button">', unsafe_allow_html=True)
