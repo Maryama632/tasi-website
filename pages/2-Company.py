@@ -131,7 +131,7 @@ COMPANIES = {
         "desc": "Digital innovation and solutions",
         "image_model_name": "Imges/elm_model.webp",
         "image_60_name": "Imges/elm_60.webp",
-        "trend": "upward"
+        "trend": "downward"
     }
 }
 
